@@ -7,9 +7,22 @@
     <link rel="stylesheet" href="./stylesheet.css">
 </head>
 <body>
-    <div id="canvasContainer">
-
-    </div>
-    <script src="./javascript.js"></script>
+    <form id="colorButtonContainer">
+        <input type='radio' name='color' value='defaultColor'>
+        <label for='default'>Default</label><br>
+        <input type='radio' name='color' value='blackColor'>
+        <label for='black'>Black</label><br>
+        <input type='radio' name='color' value='rainbowColor'>
+        <label for='rainbow'>Rainbow</label><br>
+        <input type='radio' name='color' value='eraser'>
+        <label for='eraser'>Eraser</label><br>
+    </form>
+    <button id="cleanAll">Clean All</button>
+    <div class="slideContainer">
+        <input type="range" min="1" max="100" value="15" class="slider" id="myRange">
+      </div>
+      <p id="demo"></p>
+    <div id="canvasContainer"></div>
+    <script src="./javatest.js"></script>
 </body>
 </html>
