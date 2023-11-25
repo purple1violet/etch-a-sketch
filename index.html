@@ -7,22 +7,49 @@
     <link rel="stylesheet" href="./stylesheet.css">
 </head>
 <body>
-    <form id="colorButtonContainer">
-        <input type='radio' name='color' value='defaultColor'>
-        <label for='default'>Default</label><br>
-        <input type='radio' name='color' value='blackColor'>
-        <label for='black'>Black</label><br>
-        <input type='radio' name='color' value='rainbowColor'>
-        <label for='rainbow'>Rainbow</label><br>
-        <input type='radio' name='color' value='eraser'>
-        <label for='eraser'>Eraser</label><br>
-    </form>
-    <button id="cleanAll">Clean All</button>
-    <div class="slideContainer">
-        <input type="range" min="1" max="100" value="15" class="slider" id="myRange">
-      </div>
-      <p id="demo"></p>
-    <div id="canvasContainer"></div>
+    <h1>Click the Canvas to toggle your pen.</h1>
+    <div class="container">
+        <div class="left">
+            <div class="choiceContainer">
+                <h2>Choose Your Color</h2>
+                <form id="colorButtonContainer">
+                    <ul class="choose">
+                        <li>
+                            <input type='radio' name='color' id="default" value='defaultColor' checked>
+                            <label for='default'><input type="color" id="color-picker" value="#035224"></label>
+                        </li>
+                        <li>
+                            <input type='radio' name='color' id="black" value='blackColor'>
+                            <label for='black'>Black</label>
+                        </li>
+                        <li>
+                            <input type='radio' name='color' id="rainbow" value='rainbowColor'>
+                            <label for='rainbow'>Rainbow</label>
+                        </li>
+                    </ul>
+                
+                    <ul class="eraser">
+                        <li>
+                            <input type='radio' name='color'  id="eraser" value='eraser'>
+                            <label class="eebtn1" for='eraser'>Eraser</label>
+                        </li>
+                        <li>
+                            <input type='radio' name='color' id="cleanAll" value='cleanall'>
+                            <label class="eebtn1" for='cleanAll'>Clean All</label>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div class="slideContainer">
+                <h2>Resize the Canvas</h2>
+                <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+                <p id="demo"></p>
+            </div>
+        </div>
+        <div class="canvaContainer">
+            <div id="canvasContainer"></div>
+        </div>
+    </div>
     <script src="./javatest.js"></script>
 </body>
 </html>
